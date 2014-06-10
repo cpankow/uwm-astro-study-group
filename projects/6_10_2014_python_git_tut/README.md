@@ -30,7 +30,9 @@ In a nutshell:
 
  * http://xkcd.com/353/
  * http://legacy.python.org/dev/peps/pep-0020/
-  * OR ```python
+  * OR 
+ 
+```python
 import this
 ```
 
