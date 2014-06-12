@@ -295,8 +295,8 @@
 
 ### Remote branches ###
 
- * A local branch can be pushed to the remote repository using the following
- * `git push -u origin <branch-name>`
+ * A local branch can be pushed to a remote repository using the following
+ * `git push -u <remote> <branch-name>`
 
 ### Sharing tags ###
 
