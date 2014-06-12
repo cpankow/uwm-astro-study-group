@@ -182,7 +182,7 @@
  * Assume the current head is called *current*, the head to be merged is called "merge"
  * Identify the common ancestor of *current* and *merge*, call it *ancestor*
  * If *ancestor* is the same as *merge*, do nothing
- * If *ancestor* is the same as *commit*, do a fast-forward merge
+ * If *ancestor* is the same as *current*, do a fast-forward merge
  * Otherwise, determine the changes between *ancestor* and *merge* and then attempt to apply those changes to the files in *current*
  * If there were no conflicts, create a new commit object, with two parents, *current* and *merge*
  * Set *HEAD* to point to this new commit, and update the working copy files for the repository accordingly
