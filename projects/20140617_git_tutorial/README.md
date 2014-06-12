@@ -270,7 +270,7 @@
  * Can track any branch is this repository using
  `git checkout -b <remote-branch> upstream/<remote-branch>
  * In general
- `git checkout -b <remote-branch> <remote-repo>/<remote-branch>`
+ `git checkout -b <remote-branch> <remote>/<remote-branch>`
 
 ### Updating from remote repositories ###
 
@@ -285,10 +285,10 @@
 
  * Once changes have been committed locally they can be shared with the upstream repository
  * Changes are "pushed" to the remote repository with
- `git push <remote-repo> <remote-head>`
- * New commit objects are added to the remote repository `<remote-repo>`
+ `git push <remote> <remote-head>`
+ * New commit objects are added to the remote repository `<remote>`
  * `remote-head` is updated to point to the same commit that it points to in the local repository
- * If no arguments are given to `git push`, it will work like `git push <remote-repo>`, where `<remote-repo>` is the current branch's remote (or *origin*, if no remote is configured for the current branch).
+ * If no arguments are given to `git push`, it will work like `git push <remote>`, where `<remote>` is the current branch's remote (or *origin*, if no remote is configured for the current branch).
  * Only push the current branch to its associated upstream branch, not all tracked branches
  `git config --global push.default upstream`
  * There are many other `push.default` options, see `git config --help` for details and the options have changed in git-2.0.0
