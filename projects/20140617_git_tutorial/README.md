@@ -166,13 +166,13 @@
 
 ### Common branching practices ###
 
- * Maintain one "master" branch and create new branches to implement new features, to fix bugs, etc...
- * "master" is used as the main branch
- * "master" is *always* in a working state
+ * Maintain one *master* branch and create new branches to implement new features, to fix bugs, etc...
+ * *master* is used as the main branch
+ * *master* is **always** in a working state
  * Other branches contain half-finished work, new features, etc...
  * Important when there are multiple developers working on the same project
- * "master" should be kept clean, only commit to "master" when you are ready to share your changes
- * If development occurred on master new features would need to be implemented in a single commit, otherwise master would be in a non-working, or unstable, state
+ * *master* should be kept clean, only commit to *master* when you are ready to share your changes
+ * If development occurred on *master* new features would need to be implemented in a single commit, otherwise *master* would be in a non-working, or unstable, state
  * With development on a branch commits can be made at any time, and even rearranged later
  * Commits are cheap!
 
