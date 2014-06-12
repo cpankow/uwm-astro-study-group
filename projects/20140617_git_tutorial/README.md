@@ -77,7 +77,7 @@
 
  * Simply a reference to a commit object within the repository
  * Usually there is a head in every repository called *master*
- * Repository can contain *any* number of heads
+ * Repository can contain **any** number of heads
  * At any given time, one head is selected as the "current head", aliased to *HEAD*, always in capitals
  * *HEAD* is the current active working copy
 
