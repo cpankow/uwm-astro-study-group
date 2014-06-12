@@ -39,7 +39,7 @@
 
 ### Learning Git ###
 
- * Usually taught by demonstarting a few commands
+ * Usually taught by demonstrating a few commands
  * This approach works, but usually leads to problems in that an understanding of the nature of Git in not conveyed
  * An illusion that some magic is happening behind the scenes
  * Explain concepts upon which Git is based
@@ -78,7 +78,7 @@
  * Simply a reference to a commit object within the repository
  * Usually there is a head in every repository called *master*
  * Repository can contain *any* number of heads
- * At any gfiven time, one head is selected as the "current head", aliased to *HEAD*, always in capitals
+ * At any given time, one head is selected as the "current head", aliased to *HEAD*, always in capitals
  * *HEAD* is the current active working copy
 
 ### The Git Index ###
