@@ -297,6 +297,7 @@
 
  * A local branch can be pushed to a remote repository using the following
  * `git push -u <remote> <branch-name>`
+ * The `-u` option sets the local branch to track the branch in the remote you've just pushed to
 
 ### Sharing tags ###
 
