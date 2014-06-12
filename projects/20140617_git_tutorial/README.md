@@ -285,13 +285,13 @@
 
  * Once changes have been committed locally they can be shared with the upstream repository
  * Changes are "pushed" to the remote repository with
- `git push origin <remote-head>`
- * New commit objects are added to the remote repository
+ `git push <remote-repo> <remote-head>`
+ * New commit objects are added to the remote repository `<remote-repo>`
  * `remote-head` is updated to point to the same commit that it points to in the local repository
- * If no arguments are given to `git push`, it will push all the branches in the repository that are set up for tracking to their remote counterparts
+ * If no arguments are given to `git push`, it will work like `git push <remote-repo>`, where `<remote-repo>` is the current branch's remote (or *origin*, if no remote is configured for the current branch).
  * Only push the current branch to its associated upstream branch, not all tracked branches
  `git config --global push.default upstream`
- * Only works for recent git versions
+ * There are many other `push.default` options, see `git config --help` for details and the options have changed in git-2.0.0
 
 ### Remote branches ###
 
