@@ -100,8 +100,8 @@
  * This add the changes to the staging area (or index), marking it for addition to the repository
  * Directories are added recursively
  * Create the commit using `git commit`
- * *HEAD* is the parent of new commit object
- * *HEAD* is updated to point to the new commit object
+ * The original *HEAD* is the parent of new commit object
+ * *HEAD* is then updated to point to the new commit object
  * All modified files, that are already under version control, can be added to the index and committed with a single command `git commit -a`
  * It is important to write clear and detailed log messages for commits
  * Clear to other developers why a specific commit was made
