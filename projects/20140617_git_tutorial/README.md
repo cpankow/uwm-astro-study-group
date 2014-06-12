@@ -237,11 +237,17 @@
 
 ## Collaboration with github ##
 
-### Cloning an existing repository ###
+### Fork a repository ###
+
+ * Repository forks allow you to copy an existing repository into your github account and give you your own copy of a repository for development usage, you can use this fork to develop your changes until you're ready to commit them upstream
+ * Go to repository github page and click "Fork"
+ * This will "fork" the repository and create it under your github account
+
+### Cloning the forked repository ###
 
  * Repository is where Git saves all the data for the history of the project
  * Clone repository
- `git clone git@github.com:cpankow/uwm-astro-study-group.git`
+ `git clone git@github.com:skymoo/uwm-astro-study-group.git`
  * Downloads the complete history of the project
  * Store data within the hidden `.git` directory with the repository
  * This directory also houses the local configuration
@@ -249,7 +255,7 @@
  * Adds remote heads as `origin/<head-name>` that correspond to the heads in the remote repository
  * Set up one head in the cloned repository to track the corresponding remote head, usually *master*
 
-### Tracking remote branches ###
+### Tracking remote branches and repositories ###
 
  * Can track a remote branch from the origin repository with:
  `git branch --track <remote-branch> origin/<remote-branch>`
@@ -257,6 +263,14 @@
  `git checkout -b <remote-branch> origin/<remote-branch>`
  * There is nothing stopping you using different names for the local and remote branches but doing so will get very confusing very fast, always use the same name!
  * Never checkout `origin/<remote-branch>` directly!
+ * Track the upstream repository from which this repository is forked
+ `git remote add upstream git@github.com:cpankow/uwm-astro-study-group.git`
+ * Pull down any changes from this "upstream" repository
+ `git fetch upstream`
+ * Can track any branch is this repository using
+ `git checkout -b <remote-branch> upstream/<remote-branch>
+ * In general
+ `git checkout -b <remote-branch> <remote-repo>/<remote-branch>`
 
 ### Updating remote repository ###
 
