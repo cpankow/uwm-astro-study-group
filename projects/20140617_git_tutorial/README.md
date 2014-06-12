@@ -272,13 +272,14 @@
  * In general
  `git checkout -b <remote-branch> <remote-repo>/<remote-branch>`
 
-### Updating remote repository ###
+### Updating from remote repositories ###
 
  * As development proceeds collaborators will add new commits to the upstream repository
- * These changes can be obtained, or "pulled", from the remote repository and merged into your local repository by running:
+ * These changes can be obtained, or "pulled", from the associated branch in the remote repository and merged into your local repository by running:
  `git pull`
  * This performs a merge with your current local head and the corresponding remote head
  * The `--rebase` option can be added to overlay your changes on top of the current remote head
+ * Assumes that you have configured which branch to track
 
 ### Sharing changes ###
 
