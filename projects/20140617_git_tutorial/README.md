@@ -47,8 +47,8 @@
 ### Git Configuration ###
 
  * Tell Git who you are
- `git config --global user.name "Adam Mercer"`
- `git config --global user.email adam.mercer@ligo.org`
+ * `git config --global user.name "Adam Mercer"`
+ * `git config --global user.email adam.mercer@ligo.org`
  * Needs to be done on every machine you use
  * Many other configuration options
 
@@ -134,7 +134,7 @@
 ### Reverting a commit ###
 
  * Commits can be reverted once they have been made
- `git revert <commit>`
+ * `git revert <commit>`
  * The changes introduced by the specified commit is undone as a new commit
  * The original change remains in the repository history
  * The commit can be removed completely but this is an advanced feature that can leave the repository in an unusable state
@@ -155,12 +155,12 @@
 ### Creating a branch ###
 
  * A local branch can be created by running the following command:
- `git branch <new-branch-name> [branch-point]`
+ * `git branch <new-branch-name> [branch-point]`
  * This will create a new branch, called `new-branch-name`, with `branch-point` as the *head*
  * The newly created branch can be made active in the working copy with:
- `git checkout <new-branch-name>`
+ * `git checkout <new-branch-name>`
  * Creation of branch and checkout can be done in a single step:
- `git checkout -b <new-branch-name> [branch-point]`
+ * `git checkout -b <new-branch-name> [branch-point]`
  * Creating and switching between branches is very fast
  * All branches are local, unless you specifically share them
  * You can have as many as you like
@@ -195,7 +195,7 @@
      * This can be alleviated with rebasing, although that comes with problems of its own
   * Draw the changes from a new feature branch into the main branch
  * Merging is performed using the command
- `git merge <merge>`
+ * `git merge <merge>`
 
 ### Resolving conflicts ###
 
@@ -210,14 +210,14 @@
 
  * Sometimes the entire history of a branch is not ready to be merge, but a few single commits may need to be ported to a different branch
  * Cherry-picking can be used to pick specific commits out of the history of one branch and apply them to another
- `git cherry-pick <commit>`
+ * `git cherry-pick <commit>`
  * The `-x` option will record the original commit ID into the log message of the cherry-picked commit
 
 ### Creating tags ###
 
  * Single commits refer to the entire state of the repository at a given point in time but the hexadecimal hash is hard to remember
  * A tag can be created which is a symbolic reference to a given commit, created using:
- `git tag -a <tag-name> [commit]`
+ * `git tag -a <tag-name> [commit]`
  * If `[commit]` is not specified, HEAD is used
  * The `-a` option creates an annotated tag, which includes a log message
  * You can checkout a specific tag using:
@@ -225,14 +225,14 @@
  * You should never commit when a tag is checked out, tags should be considered immutable
  * Tags are detached HEADs
  * A branch can be created from a tag:
- `git checkout -b <new-branch-name> <tag-name>`
+ * `git checkout -b <new-branch-name> <tag-name>`
 
 ### Cleaning the working tree ###
 
  * Sometimes you need to remove all files that are not part of the repository from your working tree:
- `git clean -dxf`
+ * `git clean -dxf`
  * Also may need to remove all non-committed changes to files that are under version control
- `git checkout -f HEAD`
+ * `git checkout -f HEAD`
  * These two commands restore the working copy to a state as it it had just been cloned
 
 ## Collaboration with github ##
@@ -247,7 +247,7 @@
 
  * Repository is where Git saves all the data for the history of the project
  * Clone repository
- `git clone git@github.com:skymoo/uwm-astro-study-group.git`
+ * `git clone git@github.com:skymoo/uwm-astro-study-group.git`
  * Downloads the complete history of the project
  * Store data within the hidden `.git` directory with the repository
  * This directory also houses the local configuration
@@ -258,25 +258,25 @@
 ### Tracking remote branches and repositories ###
 
  * Can track a remote branch from the origin repository with:
- `git branch --track <remote-branch> origin/<remote-branch>`
+ * `git branch --track <remote-branch> origin/<remote-branch>`
  * Or to create and checkout in a single command:
- `git checkout -b <remote-branch> origin/<remote-branch>`
+ * `git checkout -b <remote-branch> origin/<remote-branch>`
  * There is nothing stopping you using different names for the local and remote branches but doing so will get very confusing very fast, always use the same name!
  * Never checkout `origin/<remote-branch>` directly!
  * Track the upstream repository from which this repository is forked
- `git remote add upstream git@github.com:cpankow/uwm-astro-study-group.git`
+ * `git remote add upstream git@github.com:cpankow/uwm-astro-study-group.git`
  * Pull down any changes from this "upstream" repository
- `git fetch upstream`
+ * `git fetch upstream`
  * Can track any branch is this repository using
- `git checkout -b <remote-branch> upstream/<remote-branch>
+ * `git checkout -b <remote-branch> upstream/<remote-branch>`
  * In general
- `git checkout -b <remote-branch> <remote>/<remote-branch>`
+ * `git checkout -b <remote-branch> <remote>/<remote-branch>`
 
 ### Updating from remote repositories ###
 
  * As development proceeds collaborators will add new commits to the upstream repository
  * These changes can be obtained, or "pulled", from the associated branch in the remote repository and merged into your local repository by running:
- `git pull`
+ * `git pull`
  * This performs a merge with your current local head and the corresponding remote head
  * The `--rebase` option can be added to overlay your changes on top of the current remote head
  * Assumes that you have configured which branch to track
@@ -285,23 +285,23 @@
 
  * Once changes have been committed locally they can be shared with the upstream repository
  * Changes are "pushed" to the remote repository with
- `git push <remote> <remote-head>`
+ * `git push <remote> <remote-head>`
  * New commit objects are added to the remote repository `<remote>`
  * `remote-head` is updated to point to the same commit that it points to in the local repository
  * If no arguments are given to `git push`, it will work like `git push <remote>`, where `<remote>` is the current branch's remote (or *origin*, if no remote is configured for the current branch).
  * Only push the current branch to its associated upstream branch, not all tracked branches
- `git config --global push.default upstream`
+ * `git config --global push.default upstream`
  * There are many other `push.default` options, see `git config --help` for details and the options have changed in git-2.0.0
 
 ### Remote branches ###
 
  * A local branch can be pushed to the remote repository using the following
- `git push -u origin <branch-name>`
+ * `git push -u origin <branch-name>`
 
 ### Sharing tags ###
 
  * If you need to share tags then these can be pushed to the remote repository with:
- `git push <tag-name>`
+ * `git push <tag-name>`
  * Or all tags can be pushed with
- `git push --tags`
+ * `git push --tags`
  * Once a tag has been pushed to a remote repository it should never to changed, doing do can lead to inconsistent results
