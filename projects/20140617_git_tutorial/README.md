@@ -301,8 +301,8 @@
 
 ### Sharing tags ###
 
- * If you need to share tags then these can be pushed to the remote repository with:
- * `git push <tag-name>`
+ * If you need to share tags then these can be pushed to a remote repository with:
+ * `git push <remote> <tag-name>`
  * Or all tags can be pushed with
- * `git push --tags`
+ * `git push <remote> --tags`
  * Once a tag has been pushed to a remote repository it should never to changed, doing do can lead to inconsistent results
