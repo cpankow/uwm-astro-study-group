@@ -107,6 +107,7 @@
  * Clear to other developers why a specific commit was made
  * Clear to yourself when you come back to look at the code in the future
  * Should be able to understand the change from just looking at the log, there should be no need to read the commit itself to understand what it does
+  * http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 
 ### Referring to a commit ###
 
