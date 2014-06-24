@@ -6,21 +6,29 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from sklearn.neighbors import KNeighborsRegressor
-
 from astroML.datasets import fetch_sdss_galaxy_colors
 from astroML.plotting import scatter_contour
 
 #------------------------------------------------------------
-# Download data
+# Download data using the astroML tool
+# It will return a record array.
 data = fetch_sdss_galaxy_colors()
-data = data[::10]  # truncate for plotting
 
-# Extract colors and spectral class
+# You can reduce the amount of data by keeping every
+# 10th data point but we probably don't need to do that
+# for now
+# data = data[::10]  # truncate for plotting
+
+# Extract colors (i.e. magnitude differences) and spectral class
 ug = data['u'] - data['g']
 gr = data['g'] - data['r']
+# The spectral class is an integer that has been defined as an
+# object classification. We can see what those numbers are.
 spec_class = data['specClass']
+np.unique(data['specClass'])
 
+# In this example, the integers are 2, 3, and 4 where we are
+# told that 2=star and 3=qsos.
 stars = (spec_class == 2)
 qsos = (spec_class == 3)
 
@@ -32,12 +40,17 @@ ax = fig.add_subplot(111)
 ax.set_xlim(-0.5, 2.5)
 ax.set_ylim(-0.5, 1.5)
 
+# Make scatter plots of the colors where 'ms' is markersize and 'c'
+# is the color. The argument 'label' will go in the legend.
 ax.plot(ug[stars], gr[stars], '.', ms=4, c='b', label='stars')
 ax.plot(ug[qsos], gr[qsos], '.', ms=4, c='r', label='qsos')
 
 ax.legend(loc=2)
 
+# The x and y axes. Note that they are enclosed in '$$' so that
+# they are rendered with LaTex.
 ax.set_xlabel('$u-g$')
 ax.set_ylabel('$g-r$')
 
+# Show the figure in your ipython session.
 plt.show()
