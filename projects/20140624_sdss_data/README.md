@@ -57,4 +57,4 @@ In [12]: print astroML.__version__
 
 The Sloan Digital Sky Survey (SDSS) is a photometric and spectroscopic survey using a 2.5m telescope at Apache Point Observatory, New Mexico. The telescope has two instruments for large volume imaging and spectroscopic data.
 
-Photometric data exists in five bands: u, g, r, i, and z. Photometry exists for 357 million unique sources in ~12000 deg^2^ of sky. 
+Photometric data exists in five bands: u, g, r, i, and z. Photometry exists for 357 million unique sources in ~12000 sq.deg. of sky. 
