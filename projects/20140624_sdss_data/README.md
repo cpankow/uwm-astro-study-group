@@ -168,3 +168,9 @@ WHERE
 ```
 
 ## An Example
+
+The astroML tool called fetch_sdss_galaxy_colors that we use in the example called galaxy_colors will return a record array. In this example, we will see an array called data where each element of data is a record that contains eight items. Those record items (aka field names) are 'u', 'g', 'r', 'i', 'z', 'specClass', 'redshift', and 'redshift_err'. The field names are an attribute of the dtype object defining the record structure and you can see these by typing:
+```
+In [11]: data.dtype.names
+Out[11]: ('u', 'g', 'r', 'i', 'z', 'specClass', 'redshift', 'redshift_err')
+```
