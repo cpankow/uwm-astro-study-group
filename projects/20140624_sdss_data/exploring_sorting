@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import numpy as np
+
+# Generate 10 million random numbers from
+# a uniform distribution between [0,1).
+np.random.seed(0)
+x = np.random.rand(1E7)
+x.shape
+print x
+
+# Sort the random numbers and use the ipython function
+# %time to time it.
+%time x.sort()
+print x
+
+# If you have an array of values and want to sort by a
+# particular column, the argsort function is good.
+# First create a random array.
+y = np.random.random((5, 3))
+print y
+np.set_printoptions(precision = 2)
+print y
+
+# Get the indices of the sorted array for a sort
+# by the first column.
+sort_index = np.argsort(y[:, 0])
+print y[sort_index]
