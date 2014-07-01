@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import poisson
 
+#seed the random number program
+seed = 0
+np.random.seed(0)
+
 #Generate a poisson distribution, create four data sets with 10, 100,
 #1000, and 10000 random numbers, and save each data set to its own file.
 samples1 = np.random.poisson(5, size=10)
