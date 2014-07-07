@@ -46,4 +46,4 @@ for j in (1, 2, 3):
 
 plt.show()
 
-#plt.oplot(ellipse(mu, sigma1, sigma2, angle=alpha)
+
